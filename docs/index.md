@@ -15,7 +15,7 @@ Here are the links to the maps that was created so far, reach me to discuss some
 
  - [Link to test map](https://github.com/BrunoMonti/Beach_cleanup_maps/blob/main/docs/teste_map.html)
 
-<iframe 
+<iframe>
   width="660"
   height="375"
   src="https://github.com/BrunoMonti/Beach_cleanup_maps/blob/main/docs/teste_map.html"
