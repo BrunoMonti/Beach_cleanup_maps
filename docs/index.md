@@ -16,7 +16,7 @@ Here are the links to the maps that was created so far, reach me to discuss some
  - [Link to test map](https://github.com/BrunoMonti/Beach_cleanup_maps/blob/main/docs/teste_map.html)
 
 
-
+<html>
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
         <script>
