@@ -14,3 +14,11 @@ p {
   line-height: 1.5;
   margin-bottom: 1em;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; // 1-unit left menu, 3-unit content area
+  grid-template-rows: auto; // single row for now
+  height: 100vh; // full viewport height
+  margin: 0;
+}
