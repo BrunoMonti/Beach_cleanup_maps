@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0 auto;
   background-color: #f2f2f2;
 }
 
@@ -13,4 +13,86 @@ h1 {
 p {
   line-height: 1.5;
   margin-bottom: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; // 1-unit left menu, 3-unit content area
+  grid-template-rows: auto; // single row for now
+  height: 100vh; // full viewport height
+  margin: auto;
+  max-width: 1200px; // testing some width
+  padding: 1em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 0.8em; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  /* I'll leave here some additional styles for smaller screens */
+  .container {
+    max-width: 100%; /* some adjusting for mobile */
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 200px) {
+  /* I'll leave here some additional styles for smaller screens */
+  .container {
+    max-width: 100%; /* some adjusting for mobile */
+    font-size: 0.8em;
+  }
+}
+
+header{
+  grid-column: 1 / span 4; // span across all columns
+  text-align: center;
+  padding: 1em;
+  background-color: #f2f2f2; // using color from tutorial
+}
+
+nav {
+  grid-column: 1; // occupy the first column
+  padding: 1em;
+}
+
+.social {
+  margin-top: 2em
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.social li a {
+  color: #333; /* Customize link color */
+  text-decoration: none;
+}
+
+.social-media li a:hover {
+  color: #007bff; /* Customize hover color */
+}
+
+.updates {
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.social i {
+  font-size: 20px; /* Adjust icon size */
+  margin-right: 5px; /* Adjust icon spacing */
+}
+
+main{
+  grid-column: 2 / span 3; // span across columns 2-4
+  padding: 1em;
 }
