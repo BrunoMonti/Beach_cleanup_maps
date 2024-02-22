@@ -29,3 +29,24 @@ header{
   padding: 1em;
   background-color: #f2f2f2; // using color from tutorial
 }
+
+nav {
+  grid-column: 1; // occupy the first column
+  padding: 1em;
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social li {
+  margin-bottom: 0.5em;
+}
+
+.updates {
+  margin-top: 1em;
+  border-top: 1px solid #ccc;
+  padding: 0.5em;
+}
