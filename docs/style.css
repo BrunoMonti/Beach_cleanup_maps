@@ -50,3 +50,8 @@ nav {
   border-top: 1px solid #ccc;
   padding: 0.5em;
 }
+
+main{
+  grid-column: 2 / span 3; // span across columns 2-4
+  padding: 1em;
+}
