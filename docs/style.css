@@ -22,3 +22,10 @@ p {
   height: 100vh; // full viewport height
   margin: 0;
 }
+
+header{
+  grid-column: 1 / span 4; // span across all columns
+  text-align: center;
+  padding: 1em;
+  background-color: #f2f2f2; // using color from tutorial
+}
