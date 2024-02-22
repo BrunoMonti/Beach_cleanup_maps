@@ -34,6 +34,10 @@ p {
 
 @media (max-width: 480px) {
   /* I'll leave here some additional styles for smaller screens */
+  .container {
+    max-width: 480px; /* some adjusting for mobile */
+    padding: 0.5em;
+  }
 }
 
 header{
