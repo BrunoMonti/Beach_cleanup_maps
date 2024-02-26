@@ -60,6 +60,10 @@ header{
 nav {
   grid-column: 1; // occupy the first column
   padding: 1em;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 8px;
+}
 }
 
 .social {
@@ -98,6 +102,7 @@ main{
   grid-column: 2 / span 3; // span across columns 2-4
   padding: 1em;
   margin-top: 10px;
+  margin-left: 8px;
   margin: 0 auto;
   font-family: Arial, sans-serif;
 }
