@@ -22,7 +22,14 @@ p {
   height: 100vh; // full viewport height
   margin: auto;
   max-width: 1200px; // testing some width
-  padding: 1em;
+  padding: 1.5em;
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 1em; /* Adjust font size for readability */
+  }
 }
 
 @media (max-width: 768px) {
@@ -36,7 +43,7 @@ p {
   /* I'll leave here some additional styles for smaller screens */
   .container {
     max-width: 100%; /* some adjusting for mobile */
-    font-size: 0.8em;
+    font-size: 0.5em;
   }
 }
 
@@ -44,7 +51,7 @@ p {
   /* I'll leave here some additional styles for smaller screens */
   .container {
     max-width: 100%; /* some adjusting for mobile */
-    font-size: 0.8em;
+    font-size: 0.2em;
   }
 }
 
