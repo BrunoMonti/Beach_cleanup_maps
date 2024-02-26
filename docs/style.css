@@ -21,8 +21,15 @@ p {
   grid-template-rows: auto; // single row for now
   height: 100vh; // full viewport height
   margin: auto;
-  max-width: 1200px; // testing some width
-  padding: 1.5em;
+  max-width: 1440px; // testing some width
+  padding: 1.8em;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 1.5em; /* Adjust font size for readability */
+  }
 }
 
 @media (max-width: 960px) {
