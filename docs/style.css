@@ -52,7 +52,9 @@ header{
   grid-column: 1 / span 4; // span across all columns
   text-align: center;
   padding: 1em;
-  background-color: #f2f2f2; // using color from tutorial
+  background-color: #0592BA; // /*#f2f2f2 was using color from tutorial*/ 
+  color: #49EDEF
+  margin-bottom: 10px; /* Adjust as needed */#0592BA
 }
 
 nav {
@@ -95,4 +97,7 @@ nav {
 main{
   grid-column: 2 / span 3; // span across columns 2-4
   padding: 1em;
+  margin-top: 10px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
 }
