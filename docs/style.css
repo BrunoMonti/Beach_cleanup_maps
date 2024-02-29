@@ -73,7 +73,8 @@ header{
 
 .header-links {
   text-align: right;
-  display: inline-block; /* Allow setting width and height */
+  /* display: inline-block; Allow setting width and height */
+  display: flex; /* Make the container a flexbox */
   padding: 10px 15px; /* Adjust padding as needed */
   margin: 0 5px; /* Add spacing between links */
   border: 1px solid #ddd; /* Create a border */
