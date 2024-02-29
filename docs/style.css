@@ -74,19 +74,20 @@ header{
 .header-links {
   text-align: right;
   display: flex; /* Make the container a flexbox */
-}
-
-.hlink-1, .hlink-2, .hlink-3, .hlink-4 {
-  display: inline-block; /* Allow setting width and height */
-  padding: 10px 15px; /* Adjust padding as needed */
-  margin: 0 5px; /* Add spacing between links */
-  border: 1px solid #ddd; /* Create a border */
-  background-color: #D4FAF8; /* Add background color */
-  text-decoration: none; /* Remove underline from links */
-  color: #0592BA; /* Set text color */
+  .hlink-1, .hlink-2, .hlink-3, .hlink-4 {
+    display: inline-block; /* Allow setting width and height */
+    padding: 10px 15px; /* Adjust padding as needed */
+    margin: 0 5px; /* Add spacing between links */
+    border: 1px solid #ddd; /* Create a border */
+    background-color: #D4FAF8; /* Add background color */
+    text-decoration: none; /* Remove underline from links */
+    color: #0592BA; /* Set text color */
   /*display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));*/
+  }
 }
+
+
 
 nav {
   grid-column: 1; // occupy the first column
