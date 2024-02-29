@@ -71,13 +71,16 @@ header{
   margin-bottom: 10px; /* Adjust as needed */#0592BA
 }
 
+.header-links {
+  background-color: lightblue;
+}
+
 nav {
   grid-column: 1; // occupy the first column
   padding: 1em;
   margin-top: 10px;
   margin-left: 5px;
   margin-right: 8px;
-}
 }
 
 .social {
