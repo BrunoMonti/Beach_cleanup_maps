@@ -72,7 +72,8 @@ header{
 }
 
 .header-links {
-  background-color: lightblue;
+  background-color: #D4FAF8;
+  text-align: right
 }
 
 nav {
