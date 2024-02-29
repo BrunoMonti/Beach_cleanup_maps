@@ -81,6 +81,8 @@ header{
   background-color: #D4FAF8; /* Add background color */
   text-decoration: none; /* Remove underline from links */
   color: #0592BA; /* Set text color */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 nav {
