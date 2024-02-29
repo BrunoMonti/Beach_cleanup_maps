@@ -72,8 +72,14 @@ header{
 }
 
 .header-links {
-  background-color: #D4FAF8;
   text-align: right;
+  display: inline-block; /* Allow setting width and height */
+  padding: 10px 15px; /* Adjust padding as needed */
+  margin: 0 5px; /* Add spacing between links */
+  border: 1px solid #ddd; /* Create a border */
+  background-color: #D4FAF8; /* Add background color */
+  text-decoration: none; /* Remove underline from links */
+  color: #0592BA; /* Set text color */
 }
 
 nav {
