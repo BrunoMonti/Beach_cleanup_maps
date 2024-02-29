@@ -74,6 +74,7 @@ header{
 .header-links {
   text-align: right;
   display: flex; /* Make the container a flexbox */
+  justify-content: flex-end;
   .hlink-1, .hlink-2, .hlink-3, .hlink-4 {
     display: inline-block; /* Allow setting width and height */
     padding: 10px 15px; /* Adjust padding as needed */
