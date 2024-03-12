@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <!--Adding style from css and fonts awesome for some button like objects-->
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <!--Head part of Folium map generated in python-->
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <!--Added a little style for the map to not be too large on page-->
+    <style>html {width: 100%;height: 100%;} body {width: 100%;height: 100%;/*margin: 20px;padding: 10px;*/}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_72e490f063b850672db5714f6b4a98ff {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.fullscreen/1.4.2/Control.FullScreen.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.2/leaflet.draw.css"/>
+    <script src="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ljagis/leaflet-measure@2.1.7/dist/leaflet-measure.min.css"/>
+    <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css"/>
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    <div class="container">
+        <!--... your content goes here ...-->
+        <!--... Adding previously description ...-->
+        <!--... Starting segmentation and style of website-->
+        <!--Header to website-->
+        <header>
+            <h1 id="my-beach-cleaning-data-analysis-or-follow-up-page">Projeto de limpeza de praia e análise de dados</h1>
+            <p><strong> Olá, estou construindo o site ao longo dos dias, no meu tempo livre, enquanto vou realizando as coletas</strong></p>
+            <div class="header-links">
+                <a href="index.html" class="hlink-1">Introdução</a>
+                <a href="./subpages/project.html" class="hlink-2">O Projeto</a>
+                <a href="./subpages/hist_updates.html" class="hlink-3">História e atualizações</a>
+                <a href="./subpages/aboutme.html" class="hlink-4">Sobre mim</a>
+            </div>
+        </header>
+        
+        <!--Navigation or left menu/bar-->
+        <nav>
+            <!--Adding social medias and contacts with some style buttons-->
+            <ul class="social">
+                <li><!--LinkedIn-->
+                    <a href="https://www.linkedin.com/in/bruno-mt-olivera/">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li><!--Github-->
+                    <a href="https://github.com/BrunoMonti">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li><!--Instagram of the Project-->
+                    <a href="https://www.instagram.com/rastapareia/">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li><!--E-mail-->
+                    <a href="mailto:brunomo.oceano@gmail.com">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+            <section class="updates">
+                <h2>Próximas Atualizações</h2>
+                <h3>Possibilidades técnicas, alguns passos:</h3>
+                <ul>
+                    <li><s>Adicionar estilo com css ao html, para enriquecer a visualização (como disse estou aprendendo a programar html/css enquanto vou fazendo);</s></li>
+                    <ul>
+                        <li><s>adicionado o css com estilo com alguma formatação para o corpo da página (20/02/2024);</s></li>
+                        <li><s>adicionado grid (22/02/2024);</s></li>
+                        <li><s>adicionado header (22/02/2024);</s></li>
+                        <li><s>adicionado informação no menu lateral esquerdo (22/02/2024);</s></li>
+                        <ul>
+                            <li><s>separado contatos sociais e seção "próximos passos" aqui;</s>
+                            </li>
+                        </ul>
+                    <li><s>adicionado antigo mapa ao "corpo principal" do site;</s></li>
+                    </ul>
+                    <li>construir a base de dados para as informações;</li>
+                    <li>reescrever partes do script python:</li>
+                        <ul>
+                            <li>Escrever dados no banco;</li>
+                            <li>postá-lo aqui no website/webGIS;</li>
+                        </ul>
+                </ul>
+                <h3>Some possible next steps to discuss the project:</h3>
+                <ul>
+                    <li>Adding the why;</li>
+                    <li>motivations;</li>
+                    <li>ideas;</li>
+                    <li>methodologies to colect the waste on beachs;</li>
+                </ul> 
+            </section>
+        </nav>
+
+        <!--Main content or body of website, little description and map-->
+        <main>
+            <h2>Brief description of what i'm doing it</h2>
+            <ul>
+                <li>i'm colecting the material;</li>
+                <li>sorting it (For qualitative analysis);</li>
+                <li>weightning (For quantitative analysis);</li>
+                <li>and bringing the data to a Excel sheet (at the moment);</li>
+                <li>Using python script to evaluate data, transform and generating the interactive map.</li>
+            </ul>
+        
+            <h2>Last update:</h2>
+            <ul>
+                <li><b>Website</b>: 19/02/2024</li>
+                <li><b>Data in map</b>: 05/12/2023</li>
+            </ul>
+        
+            <p>Last sampling or beach cleanup: <b>16/02/2023</b></p>
+            <p>Data to upload/pending on map:</p>
+            <ul>
+                <li>14/11/2023</li>
+                <li>20/11/2023</li>
+                <li>27/11/2023</li>
+                <li>03/12/2023</li>
+                <li>23/12/2023</li>
+                <li>03/01/2024</li>
+                <li>13/01/2024</li>
+                <li>19/01/2024</li>
+                <li>29/01/2024</li>
+                <li>07/02/2024</li>
+                <li>16/02/2024</li>
+            </ul>
+        <!--<p> <code>https://brunomonti.github.io/Beach_cleanup_maps</code></p>
+        <pre><code>[Link to test map](https://github.com/BrunoMonti/Beach_cleanup_maps/blob/main/docs/teste_map.html)
+        </code></pre>...-->
+            <h2 id="my-maps">My maps</h2>
+            <p>Here are the links to the maps that was created so far, reach me to discuss some improvements:</p>
+            <div class="folium-map" id="map_72e490f063b850672db5714f6b4a98ff" ></div>
+        </main>
+    </div>
+    
+            
+        
+</body>
+<script>
+    
+    
+            var map_72e490f063b850672db5714f6b4a98ff = L.map(
+                "map_72e490f063b850672db5714f6b4a98ff",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    googleMap: "HYBRID",
+                    drawExport: false,
+                    layersControl: true,
+                }
+            );
+            L.control.scale().addTo(map_72e490f063b850672db5714f6b4a98ff);
+
+            
+
+        
+    
+            var tile_layer_592f6a9d82c9798099ae6ab1a29fc540 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 24, "maxZoom": 24, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_72e490f063b850672db5714f6b4a98ff);
+        
+    
+            L.control.fullscreen(
+                {"forceSeparateButton": false, "position": "topleft", "title": "Full Screen", "titleCancel": "Exit Full Screen"}
+            ).addTo(map_72e490f063b850672db5714f6b4a98ff);
+        
+    
+            var options = {
+              position: "topleft",
+              draw: {},
+              edit: {},
+            }
+            // FeatureGroup is to store editable layers.
+            var drawnItems = new L.featureGroup().addTo(
+                map_72e490f063b850672db5714f6b4a98ff
+            );
+            options.edit.featureGroup = drawnItems;
+            var draw_control_7d166690da3177bed9108fed9d1648da = new L.Control.Draw(
+                options
+            ).addTo( map_72e490f063b850672db5714f6b4a98ff );
+            map_72e490f063b850672db5714f6b4a98ff.on(L.Draw.Event.CREATED, function(e) {
+                var layer = e.layer,
+                    type = e.layerType;
+                var coords = JSON.stringify(layer.toGeoJSON());
+                layer.on('click', function() {
+                    alert(coords);
+                    console.log(coords);
+                });
+                drawnItems.addLayer(layer);
+             });
+            map_72e490f063b850672db5714f6b4a98ff.on('draw:created', function(e) {
+                drawnItems.addLayer(e.layer);
+            });
+            
+        
+    
+            var measure_control_4569f76fb38ff71db14b69f3f6e1bd39 = new L.Control.Measure(
+                {"position": "bottomleft", "primaryAreaUnit": "sqmeters", "primaryLengthUnit": "meters", "secondaryAreaUnit": "acres", "secondaryLengthUnit": "miles"});
+            map_72e490f063b850672db5714f6b4a98ff.addControl(measure_control_4569f76fb38ff71db14b69f3f6e1bd39);
+
+        
+    
+            L.Control.geocoder(
+                {"collapsed": true, "defaultMarkGeocode": true, "position": "topleft"}
+            ).on('markgeocode', function(e) {
+                map_72e490f063b850672db5714f6b4a98ff.setView(e.geocode.center, 11);
+            }).addTo(map_72e490f063b850672db5714f6b4a98ff);
+
+        
+    
+            var tile_layer_c9a7c6af3e9366c15fb991a1ceac3859 = L.tileLayer(
+                "https://mt1.google.com/vt/lyrs=y\u0026x={x}\u0026y={y}\u0026z={z}\u0026key=YOUR-API-KEY",
+                {"attribution": "Google", "detectRetina": false, "maxNativeZoom": 22, "maxZoom": 22, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_72e490f063b850672db5714f6b4a98ff);
+        
+    
+            map_72e490f063b850672db5714f6b4a98ff.fitBounds(
+                [[0, 0], [0, 0]],
+                {"maxZoom": 2}
+            );
+        
+    
+        function geo_json_11d77a263f417fdc0bf5be23e01ce641_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#737373", "fill": true, "fillColor": "#EBEBEB", "fillOpacity": 0.8, "opacity": 0.8, "stroke": true, "weight": 2};
+            }
+        }
+        function geo_json_11d77a263f417fdc0bf5be23e01ce641_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0, "weight": 4};
+            }
+        }
+
+        function geo_json_11d77a263f417fdc0bf5be23e01ce641_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        geo_json_11d77a263f417fdc0bf5be23e01ce641.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_11d77a263f417fdc0bf5be23e01ce641_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_11d77a263f417fdc0bf5be23e01ce641 = L.geoJson(null, {
+                onEachFeature: geo_json_11d77a263f417fdc0bf5be23e01ce641_onEachFeature,
+            
+                style: geo_json_11d77a263f417fdc0bf5be23e01ce641_styler,
+        });
+
+        function geo_json_11d77a263f417fdc0bf5be23e01ce641_add (data) {
+            geo_json_11d77a263f417fdc0bf5be23e01ce641
+                .addData(data)
+                .addTo(map_72e490f063b850672db5714f6b4a98ff);
+        }
+            geo_json_11d77a263f417fdc0bf5be23e01ce641_add({"bbox": [-48.472879, -27.427141, -48.470089, -27.426575], "features": [{"bbox": [-48.47172, -27.4269, -48.471196, -27.426707], "geometry": {"coordinates": [[[-48.471223, -27.4269], [-48.47172, -27.426778], [-48.471711, -27.426707], [-48.471196, -27.426804], [-48.471223, -27.4269]]], "type": "Polygon"}, "id": "0", "properties": {"Date": "2023-09-14", "P1": "-27.426900, -48.471223", "P2": "-27.426778, -48.471720", "P3": "-27.426707, -48.471711", "P4": "-27.426804, -48.471196", "User": "@BMonti87", "finish_tim": "07:53:00", "non-org_wa": 1.36, "org_waste": 2.44, "start_time": "06:42:00", "waste_tota": 3.82}, "type": "Feature"}, {"bbox": [-48.472166, -27.426803, -48.471733, -27.426676], "geometry": {"coordinates": [[[-48.471735, -27.426803], [-48.472166, -27.426742], [-48.47215, -27.426676], [-48.471733, -27.426724], [-48.471735, -27.426803]]], "type": "Polygon"}, "id": "1", "properties": {"Date": "2023-09-23", "P1": "-27.426803, -48.471735", "P2": "-27.426742, -48.472166", "P3": "-27.426676, -48.472150", "P4": "-27.426724, -48.471733", "User": "@BMonti87", "finish_tim": "07:08:00", "non-org_wa": 3.88, "org_waste": 1.32, "start_time": "06:14:00", "waste_tota": 5.26}, "type": "Feature"}, {"bbox": [-48.472696, -27.426774, -48.472288, -27.426609], "geometry": {"coordinates": [[[-48.472305, -27.426774], [-48.472696, -27.426674], [-48.472679, -27.426609], [-48.472288, -27.426693], [-48.472305, -27.426774]]], "type": "Polygon"}, "id": "2", "properties": {"Date": "2023-10-03", "P1": "-27.426774, -48.472305", "P2": "-27.426674, -48.472696", "P3": "-27.426609, -48.472679", "P4": "-27.426693, -48.472288", "User": "@BMonti87", "finish_tim": "07:50:00", "non-org_wa": 3.2, "org_waste": 0.91, "start_time": "06:48:00", "waste_tota": 4.18}, "type": "Feature"}, {"bbox": [-48.472879, -27.426672, -48.472682, -27.426575], "geometry": {"coordinates": [[[-48.472702, -27.426672], [-48.472879, -27.426635], [-48.472861, -27.426575], [-48.472682, -27.426612], [-48.472702, -27.426672]]], "type": "Polygon"}, "id": "3", "properties": {"Date": "2023-10-13", "P1": "-27.426672, -48.472702", "P2": "-27.426635, -48.472879", "P3": "-27.426575, -48.472861", "P4": "-27.426612, -48.472682", "User": "@BMonti87", "finish_tim": "07:48:00", "non-org_wa": 0.3, "org_waste": 1.74, "start_time": "07:12:00", "waste_tota": 2.08}, "type": "Feature"}, {"bbox": [-48.471049, -27.426967, -48.47072, -27.426825], "geometry": {"coordinates": [[[-48.471049, -27.426905], [-48.471045, -27.426825], [-48.47072, -27.426898], [-48.470735, -27.426967], [-48.471049, -27.426905]]], "type": "Polygon"}, "id": "4", "properties": {"Date": "2023-10-20", "P1": "-27.426905, -48.471049", "P2": "-27.426967, -48.470735", "P3": "-27.426898, -48.47072", "P4": "-27.426825, -48.471045", "User": "@BMonti87", "finish_tim": "07:39:00", "non-org_wa": 1.96, "org_waste": 2.01, "start_time": "06:49:00", "waste_tota": 4.02}, "type": "Feature"}, {"bbox": [-48.470742, -27.427093, -48.470344, -27.4269], "geometry": {"coordinates": [[[-48.470742, -27.427018], [-48.470714, -27.4269], [-48.470344, -27.426963], [-48.470369, -27.427093], [-48.470742, -27.427018]]], "type": "Polygon"}, "id": "5", "properties": {"Date": "2023-10-26", "P1": "-27.427018, -48.470742", "P2": "-27.427093, -48.470369", "P3": "-27.426963, -48.470344", "P4": "-27.4269, -48.470714", "User": "@BMonti87", "finish_tim": "07:49:00", "non-org_wa": 1.08, "org_waste": 3.08, "start_time": "06:48:00", "waste_tota": 4.22}, "type": "Feature"}, {"bbox": [-48.470358, -27.427141, -48.470089, -27.426967], "geometry": {"coordinates": [[[-48.470333, -27.426967], [-48.470089, -27.427008], [-48.470118, -27.427141], [-48.470358, -27.427095], [-48.470333, -27.426967]]], "type": "Polygon"}, "id": "6", "properties": {"Date": "2023-11-04", "P1": "-27.426967, -48.470333", "P2": "-27.427008, -48.470089", "P3": "-27.427141, -48.470118", "P4": "-27.427095, -48.470358", "User": "@Rastapareia", "finish_tim": "07:12:00", "non-org_wa": 1.02, "org_waste": 2.6, "start_time": "06:16:00", "waste_tota": 4.11}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_11d77a263f417fdc0bf5be23e01ce641.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["Date", "P1", "P2", "P3", "P4", "User", "finish_tim", "non-org_wa", "org_waste", "start_time", "waste_tota"];
+    let aliases = ["Date", "P1", "P2", "P3", "P4", "User", "finish_tim", "non-org_wa", "org_waste", "start_time", "waste_tota"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{"className": "foliumtooltip", "sticky": true});
+                     
+    
+            map_72e490f063b850672db5714f6b4a98ff.fitBounds(
+                [[-27.427141, -48.472879], [-27.426575, -48.470089]],
+                {}
+            );
+        
+    
+            var layer_control_942b9d71a1fcd67fa776d000c00f3265 = {
+                base_layers : {
+                    "openstreetmap" : tile_layer_592f6a9d82c9798099ae6ab1a29fc540,
+                },
+                overlays :  {
+                    "Google Hybrid" : tile_layer_c9a7c6af3e9366c15fb991a1ceac3859,
+                    "Coletas" : geo_json_11d77a263f417fdc0bf5be23e01ce641,
+                },
+            };
+            L.control.layers(
+                layer_control_942b9d71a1fcd67fa776d000c00f3265.base_layers,
+                layer_control_942b9d71a1fcd67fa776d000c00f3265.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_72e490f063b850672db5714f6b4a98ff);
+        
+</script>
+</html>

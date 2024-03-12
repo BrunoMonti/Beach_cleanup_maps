@@ -1,0 +1,143 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;  /*margin: 20px;padding: 10px;*/
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+}
+
+p {
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr; // 1-unit left menu, 3-unit content area
+  grid-template-rows: auto; // single row for now
+  height: 100vh; // full viewport height
+  margin: auto;
+  max-width: 1440px; // testing some width
+  padding: 1.8em;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 1.5em; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 1em; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Adjust content width for mobile */
+    font-size: 0.8em; /* Adjust font size for readability */
+  }
+}
+
+@media (max-width: 480px) {
+  /* I'll leave here some additional styles for smaller screens */
+  .container {
+    max-width: 100%; /* some adjusting for mobile */
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 200px) {
+  /* I'll leave here some additional styles for smaller screens */
+  .container {
+    max-width: 100%; /* some adjusting for mobile */
+    font-size: 0.2em;
+  }
+}
+
+header{
+  grid-column: 1 / span 4; // span across all columns
+  text-align: center;
+  padding: 1em;
+  background-color: #0592BA; // /*#f2f2f2 was using color from tutorial*/ 
+  color: #49EDEF
+  margin-bottom: 10px; /* Adjust as needed */#0592BA
+}
+
+.header-links {
+  text-align: right;
+  display: flex; /* Make the container a flexbox */
+  justify-content: flex-end;
+  .hlink-1, .hlink-2, .hlink-3, .hlink-4 {
+    display: inline-block; /* Allow setting width and height */
+    padding: 10px 15px; /* Adjust padding as needed */
+    margin: 0 5px; /* Add spacing between links */
+    border: 1px solid #ddd; /* Create a border */
+    background-color: #D4FAF8; /* Add background color */
+    text-decoration: none; /* Remove underline from links */
+    color: #0592BA; /* Set text color */
+  /*display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));*/
+  }
+}
+
+
+
+nav {
+  grid-column: 1; // occupy the first column
+  padding: 1em;
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 8px;
+}
+
+.social {
+  margin-top: 2em
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 10;
+}
+
+.social li {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing as needed */
+}
+
+.social li a {
+  color: #333; /* Customize link color */
+  text-decoration: none;
+}
+
+.social-media li a:hover {
+  color: #007bff; /* Customize hover color */
+}
+
+.updates {
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  padding: 0.5em;
+}
+
+.social i {
+  font-size: 20px; /* Adjust icon size */
+  margin-right: 5px; /* Adjust icon spacing */
+}
+
+main{
+  grid-column: 2 / span 3; // span across columns 2-4
+  padding: 1em;
+  margin-top: 10px;
+  margin-left: 8px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
