@@ -1,0 +1,22 @@
+.lang-button {
+  display: inline-block; /* Allow side-by-side positioning */
+  padding: 15px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px; /* Add rounded corners */
+  background-color: #f5f5f5;
+  cursor: pointer; /* Indicate clickable behavior */
+  text-align: center; /* Center text within button */
+  text-decoration: none; /* Remove underline from text */
+  color: #000;
+}
+
+.lang-button img {
+  width: 30px; /* Adjust image size as needed */
+  height: 20px; /* Adjust image size as needed */
+  margin-bottom: 5px; /* Add space between image and text */
+}
+
+.lang-button:hover {
+  background-color: #ddd; /* Change background color on hover */
+}
