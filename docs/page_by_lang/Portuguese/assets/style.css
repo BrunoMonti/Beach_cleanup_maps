@@ -4,94 +4,88 @@ body {
   background-color: #f2f2f2;
 }
 
+html { scroll-behavior: smooth; }
+
 h1 {
   font-size: 2em;
   text-align: center;
   color: #333;
 }
 
-p {
-  line-height: 1.5;
-  margin-bottom: 1em;
-}
+p { line-height: 1.5; margin-bottom: 1em; }
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 3fr; // 1-unit left menu, 3-unit content area
-  grid-template-rows: auto; // single row for now
-  height: 100vh; // full viewport height
+  grid-template-columns: 1fr 3fr; /* 1-unit left menu, 3-unit content area */
+  height: 100vh; /* full viewport height */
   margin: auto;
-  max-width: 1440px; // testing some width
+  max-width: 1440px;
   padding: 1.8em;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    max-width: 100%; /* Adjust content width for mobile */
-    font-size: 1.5em; /* Adjust font size for readability */
-  }
 }
 
 @media (max-width: 960px) {
   .container {
-    max-width: 100%; /* Adjust content width for mobile */
-    font-size: 1em; /* Adjust font size for readability */
+    max-width: 100%;
+    height: auto;
+    font-size: 1em;
   }
 }
 
 @media (max-width: 768px) {
   .container {
-    max-width: 100%; /* Adjust content width for mobile */
-    font-size: 0.8em; /* Adjust font size for readability */
+    grid-template-columns: 1fr; /* single column on mobile */
   }
+  header, nav, main { grid-column: 1; }
+  .header-links { justify-content: center; flex-wrap: wrap; }
 }
 
-@media (max-width: 480px) {
-  /* I'll leave here some additional styles for smaller screens */
-  .container {
-    max-width: 100%; /* some adjusting for mobile */
-    font-size: 0.5em;
-  }
-}
-
-@media (max-width: 200px) {
-  /* I'll leave here some additional styles for smaller screens */
-  .container {
-    max-width: 100%; /* some adjusting for mobile */
-    font-size: 0.2em;
-  }
-}
-
-header{
-  grid-column: 1 / span 4; // span across all columns
+header {
+  grid-column: 1 / span 4;
   text-align: center;
   padding: 1em;
-  background-color: #0592BA; // /*#f2f2f2 was using color from tutorial*/ 
-  color: #49EDEF
-  margin-bottom: 10px; /* Adjust as needed */#0592BA
+  background-color: #0592BA;
+  color: #49EDEF;
+  margin-bottom: 10px;
+  border-radius: 6px;
 }
 
 .header-links {
   text-align: right;
-  display: flex; /* Make the container a flexbox */
+  display: flex;
   justify-content: flex-end;
-  .hlink-1, .hlink-2, .hlink-3, .hlink-4 {
-    display: inline-block; /* Allow setting width and height */
-    padding: 10px 15px; /* Adjust padding as needed */
-    margin: 0 5px; /* Add spacing between links */
-    border: 1px solid #ddd; /* Create a border */
-    background-color: #D4FAF8; /* Add background color */
-    text-decoration: none; /* Remove underline from links */
-    color: #0592BA; /* Set text color */
-  /*display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));*/
-  }
+  flex-wrap: wrap;
+  gap: .4em;
 }
 
+.header-links a {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #D4FAF8;
+  text-decoration: none;
+  color: #0592BA;
+  border-radius: 4px;
+}
 
+.header-links a:hover { background-color: #fff; }
+
+.cta {
+  display: inline-block;
+  margin: .3em .2em;
+  padding: .65em 1.5em;
+  background-color: #0592BA;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+
+.cta:hover { background-color: #04708F; color: #fff; }
 
 nav {
-  grid-column: 1; // occupy the first column
+  grid-column: 1;
   padding: 1em;
   margin-top: 10px;
   margin-left: 5px;
@@ -99,43 +93,69 @@ nav {
 }
 
 .social {
-  margin-top: 2em
+  margin-top: 2em;
   list-style: none;
   text-align: center;
   padding: 0;
-  margin: 10;
 }
 
 .social li {
   display: inline-block;
-  margin-right: 10px; /* Adjust spacing as needed */
+  margin-right: 10px;
 }
 
 .social li a {
-  color: #333; /* Customize link color */
+  color: #333;
   text-decoration: none;
 }
 
-.social-media li a:hover {
-  color: #007bff; /* Customize hover color */
-}
-
-.updates {
-  margin-top: 2em;
-  border-top: 1px solid #ccc;
-  padding: 0.5em;
-}
+.social li a:hover { color: #007bff; }
 
 .social i {
-  font-size: 20px; /* Adjust icon size */
-  margin-right: 5px; /* Adjust icon spacing */
+  font-size: 20px;
+  margin-right: 5px;
 }
 
-main{
-  grid-column: 2 / span 3; // span across columns 2-4
+.lang-switch {
+  margin-top: 1.2em;
+  text-align: center;
+  font-size: .95em;
+}
+
+.lang-switch a { color: #0592BA; }
+
+.contact {
+  margin-top: 1em;
+  font-size: .9em;
+  border-top: 1px solid #ccc;
+  padding-top: .5em;
+}
+
+.contact h3 { font-size: 1em; }
+
+main {
+  grid-column: 2 / span 3;
   padding: 1em;
   margin-top: 10px;
   margin-left: 8px;
   margin: 0 auto;
-  font-family: Arial, sans-serif;
 }
+
+table.history {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+  background-color: #fff;
+}
+
+table.history th, table.history td {
+  border: 1px solid #ccc;
+  padding: .4em .6em;
+  font-size: .9em;
+  text-align: left;
+}
+
+table.history th { background-color: #0592BA; color: #fff; }
+table.history tr:nth-child(even) { background-color: #f8f8f8; }
+
+.map-note { font-size: .85em; color: #555; }
