@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O Projeto — Mapa de Limpeza de Praia</title>
+  <meta name="description" content="Como funcionam as coletas: recolhimento, separação, pesagem e transformação dos dados de campo em mapa web aberto.">
+  <link rel="canonical" href="https://brunomonti.github.io/Beach_cleanup_maps/page_by_lang/Portuguese/subpages/project.html">
+    <link rel="alternate" hreflang="en" href="https://brunomonti.github.io/Beach_cleanup_maps/page_by_lang/English/subpages/project.html">
+    <link rel="alternate" hreflang="pt" href="https://brunomonti.github.io/Beach_cleanup_maps/page_by_lang/Portuguese/subpages/project.html">
+    <link rel="alternate" hreflang="es" href="https://brunomonti.github.io/Beach_cleanup_maps/page_by_lang/Spanish/subpages/project.html">
+    <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../assets/icons/favicon-16.png">
+    <link rel="apple-touch-icon" href="../../../assets/icons/apple-touch-icon.png">
+    <meta property="og:title" content="O Projeto — Mapa de Limpeza de Praia">
+    <meta property="og:description" content="Como funcionam as coletas: recolhimento, separação, pesagem e transformação dos dados de campo em mapa web aberto.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brunomonti.github.io/Beach_cleanup_maps/page_by_lang/Portuguese/subpages/project.html">
+    <meta property="og:image" content="https://brunomonti.github.io/Beach_cleanup_maps/assets/icons/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale:alternate" content="es_ES">
+
+    <link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dados e mapas das limpezas de praia</h1>
+            <p><strong>Olá! Estou construindo o site aos poucos, no meu tempo livre, enquanto vou coletando os dados.</strong></p>
+            <a class="cta" href="#my-maps">Ver o mapa ↓</a>
+            <div class="header-links">
+                <a href="../index.html" class="hlink-1">Introdução</a>
+                <a href="project.html" class="hlink-2">O projeto</a>
+                <a href="hist_updates.html" class="hlink-3">Histórico e atualizações</a>
+                <a href="aboutme.html" class="hlink-4">Sobre mim</a>
+            </div>
+        </header>
+
+        <nav>
+            <ul class="social">
+                <li><a href="https://www.linkedin.com/in/bruno-mt-olivera/" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                <li><a href="https://github.com/BrunoMonti" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a></li>
+                <li><a href="https://www.instagram.com/rastapareia/" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="mailto:brunomo.oceano@gmail.com" title="E-mail" aria-label="E-mail"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+            <section class="contact">
+                <h3>Como me contatar</h3>
+                <p>brunomo.oceano@gmail.com</p>
+            </section>
+            <p class="lang-switch"><a href="../../English/index.html" hreflang="en">English</a> · <a href="../../Spanish/index.html" hreflang="es">Español</a></p>
+        </nav>
+
+        <main>
+            <h2>O projeto</h2>
+            <p>Toda coleta passa pela mesma rotina, para que os dados fiquem comparáveis entre os dias:</p>
+            <ol>
+                <li><b>Coleta</b> — percorro um trecho de praia, com os quatro pontos de canto georreferenciados (coordenadas anotadas em campo);</li>
+                <li><b>Separação</b> — separo o material (análise qualitativa);</li>
+                <li><b>Pesagem</b> — peso tudo (análise quantitativa: orgânico × inorgânico);</li>
+                <li><b>Registro &amp; publicação</b> — um CSV de campo guarda tudo; scripts Python (pandas, geopandas, shapely) transformam e geram o mapa web interativo (Leaflet, publicado via GitHub Pages).</li>
+            </ol>
+            <h3>Talvez em breve</h3>
+            <ul>
+                <li>banco de dados PostgreSQL/PostGIS (armazenamento estruturado, consultas espaciais);</li>
+                <li>categorias de resíduo mais detalhadas;</li>
+                <li>mais praias pelo Brasil;</li>
+                <li>dados abertos para coletas de outras pessoas.</li>
+            </ul>
+
+        </main>
+    </div>
+</body>
+</html>

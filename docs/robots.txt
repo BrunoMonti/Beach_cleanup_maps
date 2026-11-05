@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://brunomonti.github.io/Beach_cleanup_maps/sitemap.xml
